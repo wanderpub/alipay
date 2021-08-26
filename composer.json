@@ -1,7 +1,7 @@
 {
     "type": "library",
-    "name": "wander/wepay",
-    "homepage": "https://github.com/wanderpub/wepay.git",
+    "name": "wander/alipay",
+    "homepage": "https://github.com/wanderpub/alipay.git",
     "description": "支付宝支付接口--PHP版",
     "license": "MIT",
     "authors": [
