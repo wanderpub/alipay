@@ -1,0 +1,29 @@
+{
+    "type": "library",
+    "name": "wander/wepay",
+    "homepage": "https://github.com/wanderpub/wepay.git",
+    "description": "支付宝支付接口--PHP版",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "wander",
+            "email": "13834563@qq.com"
+        }
+    ],
+    "keywords": [
+        "alipay"
+    ],
+    "require": {
+        "php": ">=7.1",
+        "ext-json": "*",
+        "ext-curl": "*",
+        "ext-bcmath": "*",
+        "ext-openssl": "*",
+        "ext-mbstring": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Alipay\\": "Alipay"
+        }
+    }
+}
