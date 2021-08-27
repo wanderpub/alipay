@@ -4,13 +4,13 @@
 include "../include.php";
 
 // 2. 准备公众号配置参数
-$config = include "./alipay.php";
+$config = include "./Alipay.php";
 
 try {
     // 实例支付对象
-    // $pay = \We::AliPayApp($config);
-    // $pay = new \AliPay\App($config);
-    $pay = \AliPay\App::instance($config);
+    // $pay = \We::AlipayApp($config);
+    // $pay = new \Alipay\App($config);
+    $pay = \Alipay\App::instance($config);
 
     $data = $pay->notify();
     if (in_array($data['trade_status'], ['TRADE_SUCCESS', 'TRADE_FINISHED'])) {

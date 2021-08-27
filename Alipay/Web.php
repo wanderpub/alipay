@@ -1,15 +1,15 @@
 <?php
 
-namespace AliPay;
+namespace Alipay;
 
-use Alipay\Basic\BasicAliPay;
+use Alipay\Basic\BasicAlipay;
 
 /**
  * 支付宝网站支付
  * Class Web
- * @package AliPay
+ * @package Alipay
  */
-class Web extends BasicAliPay
+class Web extends BasicAlipay
 {
     /**
      * Web constructor.
@@ -18,7 +18,7 @@ class Web extends BasicAliPay
     public function __construct(array $options)
     {
         parent::__construct($options);
-        $this->options->set('method', 'alipay.trade.page.pay');
+        $this->options->set('method', 'Alipay.trade.page.pay');
         $this->params->set('product_code', 'FAST_INSTANT_TRADE_PAY');
     }
 

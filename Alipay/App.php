@@ -1,15 +1,15 @@
 <?php
 
-namespace AliPay;
+namespace Alipay;
 
-use Alipay\Basic\BasicAliPay;
+use Alipay\Basic\BasicAlipay;
 
 /**
  * 支付宝App支付网关
  * Class App
- * @package AliPay
+ * @package Alipay
  */
-class App extends BasicAliPay
+class App extends BasicAlipay
 {
 
     /**
@@ -19,7 +19,7 @@ class App extends BasicAliPay
     public function __construct(array $options)
     {
         parent::__construct($options);
-        $this->options->set('method', 'alipay.trade.app.pay');
+        $this->options->set('method', 'Alipay.trade.app.pay');
         $this->params->set('product_code', 'QUICK_MSECURITY_PAY');
     }
 

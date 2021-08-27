@@ -4,14 +4,14 @@ namespace Alipay\Basic;
 
 use Alipay\Exceptions\InvalidArgumentException;
 use Alipay\Exceptions\InvalidResponseException;
-use AliPay\Basic\DataArray;
+use Alipay\Basic\DataArray;
 
 /**
  * 支付宝支付基类
- * Class AliPay
- * @package AliPay\Basic
+ * Class Alipay
+ * @package Alipay\Basic
  */
-abstract class BasicAliPay
+abstract class BasicAlipay
 {
 
     /**
@@ -42,10 +42,10 @@ abstract class BasicAliPay
      * 正常请求网关
      * @var string
      */
-    protected $gateway = 'https://openapi.alipay.com/gateway.do?charset=utf-8';
+    protected $gateway = 'https://openapi.Alipay.com/gateway.do?charset=utf-8';
 
     /**
-     * AliPay constructor.
+     * Alipay constructor.
      * @param array $options
      */
     public function __construct($options)
@@ -62,7 +62,7 @@ abstract class BasicAliPay
             throw new InvalidArgumentException("Missing Config -- [private_key]");
         }
         if (!empty($options['debug'])) {
-            $this->gateway = 'https://openapi.alipaydev.com/gateway.do?charset=utf-8';
+            $this->gateway = 'https://openapi.Alipaydev.com/gateway.do?charset=utf-8';
         }
         $this->options = new DataArray([
             'app_id'    => $this->config->get('appid'),
@@ -104,7 +104,7 @@ abstract class BasicAliPay
      */
     public function query($out_trade_no = '')
     {
-        $this->options->set('method', 'alipay.trade.query');
+        $this->options->set('method', 'Alipay.trade.query');
         return $this->getResult(['out_trade_no' => $out_trade_no]);
     }
 
@@ -119,7 +119,7 @@ abstract class BasicAliPay
     public function refund($options, $refund_amount = null)
     {
         if (!is_array($options)) $options = ['out_trade_no' => $options, 'refund_amount' => $refund_amount];
-        $this->options->set('method', 'alipay.trade.refund');
+        $this->options->set('method', 'Alipay.trade.refund');
         return $this->getResult($options);
     }
 
@@ -133,7 +133,7 @@ abstract class BasicAliPay
     public function close($options)
     {
         if (!is_array($options)) $options = ['out_trade_no' => $options];
-        $this->options->set('method', 'alipay.trade.close');
+        $this->options->set('method', 'Alipay.trade.close');
         return $this->getResult($options);
     }
 
@@ -267,13 +267,13 @@ abstract class BasicAliPay
      */
     protected function buildPayHtml()
     {
-        $html = "<form id='alipaysubmit' name='alipaysubmit' action='{$this->gateway}' method='post'>";
+        $html = "<form id='Alipaysubmit' name='Alipaysubmit' action='{$this->gateway}' method='post'>";
         foreach ($this->options->get() as $key => $value) {
             $value = str_replace("'", '&apos;', $value);
             $html .= "<input type='hidden' name='{$key}' value='{$value}'/>";
         }
         $html .= "<input type='submit' value='ok' style='display:none;'></form>";
-        return "{$html}<script>document.forms['alipaysubmit'].submit();</script>";
+        return "{$html}<script>document.forms['Alipaysubmit'].submit();</script>";
     }
 
     /**

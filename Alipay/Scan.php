@@ -1,15 +1,15 @@
 <?php
 
-namespace AliPay;
+namespace Alipay;
 
-use Alipay\Basic\BasicAliPay;
+use Alipay\Basic\BasicAlipay;
 
 /**
  * 支付宝扫码支付
  * Class Scan
- * @package AliPay
+ * @package Alipay
  */
-class Scan extends BasicAliPay
+class Scan extends BasicAlipay
 {
     /**
      * Scan constructor.
@@ -18,7 +18,7 @@ class Scan extends BasicAliPay
     public function __construct(array $options)
     {
         parent::__construct($options);
-        $this->options->set('method', 'alipay.trade.precreate');
+        $this->options->set('method', 'Alipay.trade.precreate');
     }
 
     /**

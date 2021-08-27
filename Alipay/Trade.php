@@ -1,15 +1,15 @@
 <?php
 
-namespace AliPay;
+namespace Alipay;
 
-use Alipay\Basic\BasicAliPay;
+use Alipay\Basic\BasicAlipay;
 
 /**
  * 支付宝标准接口
  * Class Trade
- * @package AliPay
+ * @package Alipay
  */
-class Trade extends BasicAliPay
+class Trade extends BasicAlipay
 {
 
     /**

@@ -72,8 +72,8 @@ $config['return_url'] = '';//支付成功返回地址
 try {
     
     // 实例支付对象
-    $pay = \AliPay\Web::instance($config);
-    // $pay = new \AliPay\Web($config);
+    $pay = \Alipay\Web::instance($config);
+    // $pay = new \Alipay\Web($config);
     
     // 参考链接：https://docs.open.alipay.com/api_1/alipay.trade.page.pay
     $result = $pay->apply([
@@ -102,8 +102,8 @@ $config['return_url'] = '';//支付成功返回地址
 try {
 
     // 实例支付对象
-    $pay = \AliPay\Wap::instance($config);
-    // $pay = new \AliPay\Wap($config);
+    $pay = \Alipay\Wap::instance($config);
+    // $pay = new \Alipay\Wap($config);
 
     // 参考链接：https://docs.open.alipay.com/api_1/alipay.trade.wap.pay
     $result = $pay->apply([

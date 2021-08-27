@@ -1,15 +1,15 @@
 <?php
 
-namespace AliPay;
+namespace Alipay;
 
-use Alipay\Basic\BasicAliPay;
+use Alipay\Basic\BasicAlipay;
 
 /**
  * 支付宝刷卡支付
  * Class Pos
- * @package AliPay
+ * @package Alipay
  */
-class Pos extends BasicAliPay
+class Pos extends BasicAlipay
 {
     /**
      * Pos constructor.
@@ -18,7 +18,7 @@ class Pos extends BasicAliPay
     public function __construct(array $options)
     {
         parent::__construct($options);
-        $this->options->set('method', 'alipay.trade.pay');
+        $this->options->set('method', 'Alipay.trade.pay');
         $this->params->set('product_code', 'FACE_TO_FACE_PAYMENT');
     }
 

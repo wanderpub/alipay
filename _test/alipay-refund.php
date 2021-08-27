@@ -4,7 +4,7 @@
 include "../include.php";
 
 // 2. 准备公众号配置参数
-$config = include "./alipay.php";
+$config = include "./Alipay.php";
 
 // 原商户订单号
 $out_trade_no = '56737188841424';
@@ -13,11 +13,11 @@ $refund_fee = '1.00';
 
 try {
     // 实例支付对象
-    // $pay = We::AliPayApp($config);
-    // $pay = new \AliPay\App($config);
-    $pay = \AliPay\App::instance($config);
+    // $pay = We::AlipayApp($config);
+    // $pay = new \Alipay\App($config);
+    $pay = \Alipay\App::instance($config);
 
-    // 参考链接：https://docs.open.alipay.com/api_1/alipay.trade.refund
+    // 参考链接：https://docs.open.Alipay.com/api_1/Alipay.trade.refund
     $result = $pay->refund($out_trade_no, $refund_fee);
 
     echo '<pre>';

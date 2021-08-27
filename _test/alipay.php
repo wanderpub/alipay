@@ -11,7 +11,7 @@ return [
     'public_key'  => '',// 支付宝私钥内容 (1行填写)
     'private_key' => '',// 应用公钥证书内容（新版资金类接口转 app_cert_sn）
     'app_cert'    => '',
-    // 支付宝根证书内容（新版资金类接口转 alipay_root_cert_sn）
+    // 支付宝根证书内容（新版资金类接口转 Alipay_root_cert_sn）
     'root_cert'   => '',
     // 支付成功通知地址
     'notify_url'  => '',

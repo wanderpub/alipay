@@ -11,7 +11,7 @@
         }
     ],
     "keywords": [
-        "alipay"
+        "Alipay"
     ],
     "require": {
         "php": ">=7.1",

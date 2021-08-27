@@ -1,15 +1,15 @@
 <?php
 
-namespace AliPay;
+namespace Alipay;
 
-use Alipay\Basic\BasicAliPay;
+use Alipay\Basic\BasicAlipay;
 
 /**
  * 手机WAP网站支付支持
  * Class Wap
- * @package AliPay
+ * @package Alipay
  */
-class Wap extends BasicAliPay
+class Wap extends BasicAlipay
 {
     /**
      * Wap constructor.
@@ -18,7 +18,7 @@ class Wap extends BasicAliPay
     public function __construct(array $options)
     {
         parent::__construct($options);
-        $this->options->set('method', 'alipay.trade.wap.pay');
+        $this->options->set('method', 'Alipay.trade.wap.pay');
         $this->params->set('product_code', 'QUICK_WAP_WAY');
     }
 

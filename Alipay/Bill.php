@@ -1,15 +1,15 @@
 <?php
 
-namespace AliPay;
+namespace Alipay;
 
-use Alipay\Basic\BasicAliPay;
+use Alipay\Basic\BasicAlipay;
 
 /**
  * 支付宝电子面单下载
  * Class Bill
- * @package AliPay
+ * @package Alipay
  */
-class Bill extends BasicAliPay
+class Bill extends BasicAlipay
 {
     /**
      * Bill constructor.
@@ -18,7 +18,7 @@ class Bill extends BasicAliPay
     public function __construct(array $options)
     {
         parent::__construct($options);
-        $this->options->set('method', 'alipay.data.dataservice.bill.downloadurl.query');
+        $this->options->set('method', 'Alipay.data.dataservice.bill.downloadurl.query');
     }
 
     /**
