@@ -4,7 +4,7 @@
 include "../include.php";
 
 // 2. 准备公众号配置参数
-$config = include "./Alipay.php";
+$config = include "./alipay.php";
 
 try {
     // 实例支付对象
@@ -12,7 +12,7 @@ try {
     // $pay = new \Alipay\Transfer($config);
     $pay = \Alipay\Transfer::instance($config);
 
-    // 参考链接：https://docs.open.Alipay.com/api_28/Alipay.fund.trans.toaccount.transfer
+    // 参考链接：https://docs.open.alipay.com/api_28/alipay.fund.trans.toaccount.transfer
     $result = $pay->apply([
         'out_biz_no'      => time(), // 订单号
         'payee_type'      => 'Alipay_LOGONID', // 收款方账户类型(Alipay_LOGONID | Alipay_USERID)

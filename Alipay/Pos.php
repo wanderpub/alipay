@@ -18,7 +18,7 @@ class Pos extends BasicAlipay
     public function __construct(array $options)
     {
         parent::__construct($options);
-        $this->options->set('method', 'Alipay.trade.pay');
+        $this->options->set('method', 'alipay.trade.pay');
         $this->params->set('product_code', 'FACE_TO_FACE_PAYMENT');
     }
 

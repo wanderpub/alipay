@@ -18,7 +18,7 @@ class Scan extends BasicAlipay
     public function __construct(array $options)
     {
         parent::__construct($options);
-        $this->options->set('method', 'Alipay.trade.precreate');
+        $this->options->set('method', 'alipay.trade.precreate');
     }
 
     /**

@@ -18,7 +18,7 @@ class Wap extends BasicAlipay
     public function __construct(array $options)
     {
         parent::__construct($options);
-        $this->options->set('method', 'Alipay.trade.wap.pay');
+        $this->options->set('method', 'alipay.trade.wap.pay');
         $this->params->set('product_code', 'QUICK_WAP_WAY');
     }
 

@@ -19,7 +19,7 @@ class App extends BasicAlipay
     public function __construct(array $options)
     {
         parent::__construct($options);
-        $this->options->set('method', 'Alipay.trade.app.pay');
+        $this->options->set('method', 'alipay.trade.app.pay');
         $this->params->set('product_code', 'QUICK_MSECURITY_PAY');
     }
 

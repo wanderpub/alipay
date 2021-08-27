@@ -4,7 +4,7 @@
 include "../include.php";
 
 // 2. 准备公众号配置参数
-$config = include "./Alipay.php";
+$config = include "./alipay.php";
 
 try {
     // 实例支付对象
@@ -12,7 +12,7 @@ try {
     // $pay = new \Alipay\Pos($config);
     $pay = \Alipay\Pos::instance($config);
 
-    // 参数链接：https://docs.open.Alipay.com/api_1/Alipay.trade.pay
+    // 参数链接：https://docs.open.alipay.com/api_1/alipay.trade.pay
     $result = $pay->apply([
         'out_trade_no' => '4312412343', // 订单号
         'total_amount' => '13', // 订单金额，单位：元

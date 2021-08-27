@@ -4,7 +4,7 @@
 include "../include.php";
 
 // 2. 准备公众号配置参数
-$config = include "./Alipay.php";
+$config = include "./alipay.php";
 
 try {
     // 实例支付对象

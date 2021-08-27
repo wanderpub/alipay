@@ -18,7 +18,7 @@ class Web extends BasicAlipay
     public function __construct(array $options)
     {
         parent::__construct($options);
-        $this->options->set('method', 'Alipay.trade.page.pay');
+        $this->options->set('method', 'alipay.trade.page.pay');
         $this->params->set('product_code', 'FAST_INSTANT_TRADE_PAY');
     }
 

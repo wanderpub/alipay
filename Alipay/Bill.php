@@ -18,7 +18,7 @@ class Bill extends BasicAlipay
     public function __construct(array $options)
     {
         parent::__construct($options);
-        $this->options->set('method', 'Alipay.data.dataservice.bill.downloadurl.query');
+        $this->options->set('method', 'alipay.data.dataservice.bill.downloadurl.query');
     }
 
     /**
